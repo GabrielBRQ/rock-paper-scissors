@@ -7,10 +7,12 @@ function getComputerChoice(){
     }else{
         return 'Scissors';
     }
-}//+ 'Bot: ' + botPoint + ' Player: ' + playerPoint
+}
+
 function game(){
     let playerPoint = 0;
     let botPoint = 0;
+
     for (let i = 1; i <= 5; i++) {
         playerSelection = prompt('Round ' + i + '\nBot: ' + botPoint + ' Player: ' + playerPoint +
         '\nRock, paper or scissors: ', '');
@@ -24,6 +26,7 @@ function game(){
             botPoint++;
         }
     }
+
     if(playerPoint > botPoint){
         alert('You won! CONGRATULATIONS!' + '\nScoreboard: You: ' + playerPoint + ' Bot: '
         + botPoint);
@@ -34,10 +37,10 @@ function game(){
         alert('Draw \nWhat a game!' + '\nScoreboard: You: ' + playerPoint + ' Bot: '
         + botPoint);
     }
-    
-
 }
+
 function playRound(playerSelection, computerSelection){
+    
     if (computerSelection == 'Rock'){
         if (playerSelection.toLowerCase() == 'paper'){
             messageResult('win', playerSelection, computerSelection);
@@ -75,6 +78,7 @@ function playRound(playerSelection, computerSelection){
 }
 
 function messageResult(status, playerSelection, computerSelection){
+
     if (status == 'win')
     {
         console.log("You won! " + playerSelection + " beats " + computerSelection);
@@ -84,6 +88,7 @@ function messageResult(status, playerSelection, computerSelection){
     }else{
         console.log("Draw..."); 
     }
+
     console.log('Player choice: ' + playerSelection);
     console.log('Computer choice: ' + computerSelection);
 }
