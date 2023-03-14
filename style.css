@@ -8,7 +8,6 @@ body {
     background-color: rgb(13, 17, 23);
     display: flex;
     flex-direction: column;
-    flex: 1;
     text-align: center;
     padding: 0;
     margin: 0;
@@ -36,6 +35,7 @@ button{
 
 #container{
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -60,9 +60,15 @@ button{
     height: 75px;
 }
 
+.git{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 5px;
+}
+
 .footer{
     font-family: 'Roboto';
-    flex: 1;
     display: flex;
     align-self: stretch;
     background-color: rgb(30, 30, 32);
